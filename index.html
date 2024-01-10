@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1> Check Capital</h1>
+    <script>
+
+function checkCapital(inputString) {
+
+if (inputString === inputString.toUpperCase()){
+    return "Your string is valid"
+}else{
+    return "Your string is not valid"
+}
+}
+
+var result  =checkCapital("ADHSKJHADKF")
+document.write(result)
+    </script>
+
+    <h1>Check Minimum Length</h1>
+
+    <script>
+
+function checkMinLength(inputString) {
+
+if (inputString.length >= 8){
+    return "Your input is valid"
+}else{
+    return "Input should be greater than 8 characters."
+}
+}
+
+var result  = checkMinLength("hhhhhhhhh")
+document.write(result)
+    </script>
+
+
+<h1> Word Presence Checker</h1>
+
+<script>
+
+
+function checkWordPresence(inputString , targetWord){
+    
+    const requiredWord = "x";
+    
+    if (inputString == inputString && targetWord == requiredWord ){
+        document.write("Word found in the string")
+    }else{
+        document.write("Word not found in the string")
+    }
+}
+
+checkWordPresence("hanif", "x" )
+</script>
+
+
+<h1>String Slicing and Substring Extraction</h1>
+<script>
+
+
+const char ="abcdefghijklmnopqrstuvwxyz";
+
+function generateString(length) {
+    let result = ' ';
+    const charLength = char.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += char.charAt(Math.floor(Math.random() * charLength));
+    }
+
+    return result;
+}
+
+var str = generateString(9)
+
+document.write(str);
+
+document.write("<br>");
+
+var str2 = str.slice(2,5);
+document.write(str2);
+
+document.write("<br>");
+
+var str3 = str.substring(3,9)
+document.write(str3);
+
+
+
+</script>
+
+
+<h1>Character and Word Checker Function</h1>
+
+
+<script>
+
+function checkCharactersAndWords  (str){
+   
+   var charCount = str.length;
+   var wordCount = str.split(" ").length;
+   
+   document.write(charCount);
+   
+   document.write("<br>");
+
+   document.write(wordCount);
+    
+}
+
+checkCharactersAndWords ("hello i am hanif")
+</script>
+
+<h1>String Index Assignment</h1>
+
+<script>
+
+var str = "hanif";
+
+
+str[0]= "j";
+str[1]= "e";
+str[2]= "e";
+str[3]= "t";
+
+document.write(str);
+
+document.write("<br>");
+
+document.write(" string remains same because strings are immutable and can not be changed after defining")
+</script>
+</body>
+</html>
